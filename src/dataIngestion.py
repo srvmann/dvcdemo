@@ -5,6 +5,7 @@ df = pd.read_csv(r"C:\Users\Varun\Downloads\Saurav\Class_Records\MlopsNitish-Sin
 
 df = df.iloc[:, 3:]
 
-df = df[df["Length of Membership"] > 3]
+df = df[df["Length of Membership"] > 1]
+df.drop(columns = ["Avg. Session Length"],inplace = True)
 
 df.to_csv(os.path.join("data","customers.csv"),index = False)
